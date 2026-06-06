@@ -7,6 +7,19 @@ ll gcd(ll a, ll b) {
 }
 ```
 
+비재귀 :
+
+```cpp
+ll gcd(ll a, ll b) {
+    while (b) {
+        ll t = a % b;
+        a = b;
+        b = t;
+    }
+    return a;
+}
+```
+
 또한, lcm은 $a * b / gcd(a, b)$.
 
 ## GCD 함수의 성질
